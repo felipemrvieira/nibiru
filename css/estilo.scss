@@ -1,0 +1,123 @@
+@import "compass/css3";
+
+@font-face {
+    font-family: 'coalision';
+    src: url('fonts/Coalition.ttf') format('truetype');
+  }
+
+$cinza-claro: #f9f9f9;
+$cinza-escuro: #444;
+$roxo-claro: #442c55;
+$roxo-escuro: #251d40;
+$roxo: #503a6d;
+$verde: #0bb89a;
+
+
+@mixin degrade(){
+  background-color: #210f19;
+@include filter-gradient(#210f19, #000000, horizontal);
+@include background-image(linear-gradient(left top, #210f19 0%,#000000 100%));
+}
+
+body{
+  @include degrade();
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+}
+
+
+.typed-cursor{display: none}
+
+.container-fluid{
+    padding: 0;
+}
+
+
+#sec-2{
+
+  overflow: hidden;
+  @include degrade();
+  height: 100vh;
+
+  .texto{
+    position: absolute;
+    font-family: coalition;
+    text-transform: uppercase;
+    margin: 32px;
+    p{
+      color: #c8c8cb;
+      font-size: 112px;
+      padding: 0;
+      margin: 0;
+      line-height: 85px;
+      &:last-child{
+        color: #9392a0;
+        font-size: 80px;
+        line-height: 70px;
+      }
+    }
+    @media screen and (max-device-width: 700px) {
+      p{
+        font-size: 70px;
+        line-height: 65px;
+        &:last-child{
+          font-size: 60px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+
+  #scene{
+    height: 100vh;
+
+    #nibiru-container{
+      padding-top: 20px;
+      width: 100%;
+
+      #nibiru{
+        width: 70%;
+        margin-right: 0;
+      }
+    }
+    @media screen and (max-device-width: 700px) {
+      #nibiru-container{
+        padding-top: 130px;
+        #nibiru{
+          width: 150%;
+        }
+      }
+
+    }
+
+    #terra-container{
+      bottom: -690px;
+      padding-top: 350px;
+      width: 100%;
+      #terra{
+        width: 100%;
+      }
+      @media screen and (max-device-width: 700px) {
+        #terra{
+          width: 200%;
+        }
+      }
+    }
+
+    #astronauta-container{
+      width: 100%;
+      #astronauta{
+        padding-top: 100px;
+
+      }
+      @media screen and (max-device-width: 700px) {
+        #astronauta{
+          padding-top: 140px;
+          width: 90%;
+        }
+      }
+    }
+
+  }
+
+}
