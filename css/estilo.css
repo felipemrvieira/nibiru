@@ -44,7 +44,7 @@ body {
 /* line 42, estilo.scss */
 #sec-2 .texto {
   position: absolute;
-  font-family: coalition;
+  font-family: 'coalision';
   text-transform: uppercase;
   margin: 32px;
 }
